@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "LawyerImage": "https://i.ibb.co.com/W4wtgYCr/lawer1.jpg",
+      "name": "Barrister Anisur Rahman",
+      "experience": "12 years",
+      "speciality": "Criminal Law",
+      "fee": "৳3000 per session",
+      "availability": ["Saturday", "Sunday", "Tuesday", "Thursday"],
+      "licenseNo": "BD-LAW-10234"
+    },
+    {
+      "id": 2,
+      "LawyerImage": "https://i.ibb.co.com/jPHLY5xL/lawer2.jpg",
+      "name": "Advocate Nusrat Jahan",
+      "experience": "8 years",
+      "speciality": "Family & Divorce Law",
+      "fee": "৳2000 per session",
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "licenseNo": "BD-LAW-11289"
+    },
+    {
+      "id": 3,
+      "LawyerImage": "https://i.ibb.co.com/DPzBfCby/lawer3.jpg",
+      "name": "Advocate Md. Rahim Uddin",
+      "experience": "15 years",
+      "speciality": "Land & Property Law",
+      "fee": "৳2500 per session",
+      "availability": ["Sunday", "Tuesday", "Thursday"],
+      "licenseNo": "BD-LAW-09763"
+    },
+    {
+      "id": 4,
+      "LawyerImage": "https://i.ibb.co.com/YFRVGCHw/lawer4.jpg",
+      "name": "Senior Advocate Ishaque Ali",
+      "experience": "20+ years",
+      "speciality": "Corporate Law",
+      "fee": "৳5000 per session",
+      "availability": ["Saturday", "Monday", "Wednesday"],
+      "licenseNo": "BD-LAW-05421"
+    },
+    {
+      "id": 5,
+      "LawyerImage": "https://i.ibb.co.com/SXbfNJV5/lawer5.webp",
+      "name": "Advocate Meherin Akhter",
+      "experience": "6 years",
+      "speciality": "Cyber & ICT Law",
+      "fee": "৳2200 per session",
+      "availability": ["Sunday", "Tuesday", "Friday"],
+      "licenseNo": "BD-LAW-12876"
+    },
+    {
+      "id": 6,
+      "LawyerImage": "https://i.ibb.co.com/gbF9qfYQ/lawer6.jpg",
+      "name": "Advocate Rezaul Karim",
+      "experience": "10 years",
+      "speciality": "Tax & VAT Law",
+      "fee": "৳2800 per session",
+      "availability": ["Saturday", "Wednesday", "Thursday"],
+      "licenseNo": "BD-LAW-07645"
+    },
+    {
+      "id": 7,
+      "LawyerImage": "https://i.ibb.co.com/d4gcdXBx/lawer7.jpg",
+      "name": "Advocate Tamanna Nasrin",
+      "experience": "5 years",
+      "speciality": "Women & Child Rights",
+      "fee": "৳1800 per session",
+      "availability": ["Sunday", "Monday", "Wednesday"],
+      "licenseNo": "BD-LAW-13458"
+    },
+    {
+      "id": 8,
+      "LawyerImage": "https://i.ibb.co.com/fGCLwrzr/lawer8.jpg",
+      "name": "Advocate Shahriar Hossain",
+      "experience": "11 years",
+      "speciality": "Labor Law",
+      "fee": "৳2600 per session",
+      "availability": ["Saturday", "Tuesday", "Thursday"],
+      "licenseNo": "BD-LAW-11907"
+    },
+    {
+      "id": 9,
+      "LawyerImage": "https://i.ibb.co.com/d47KbtLc/nahid.jpg",
+      "name": "Advocate Nahid Hasan",
+      "experience": "7 years",
+      "speciality": "Constitutional & Human Rights Law",
+      "fee": "৳2400 per session",
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "licenseNo": "BD-LAW-10932"
+    }
+  ]
+  
