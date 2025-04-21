@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 const SingleData = ({info}) => {
     return (
         <div className="border rounded-xl p-4 shadow-md bg-white w-full max-w-xl flex items-center gap-4">
@@ -29,9 +29,12 @@ const SingleData = ({info}) => {
     </div>
 
     {/* View Details Button */}
-    <button className="mt-3 text-blue-600 border border-blue-600 hover:bg-blue-50 py-1 px-4 rounded-full text-sm">
-      View Details
-    </button>
+    <Link to={`/detail/${info.id}`}>
+  <button className="mt-3 text-blue-600 border border-blue-600 hover:bg-blue-50 py-1 px-4 rounded-full text-sm">
+    View Details
+  </button>
+</Link>
+
   </div>
 </div>
 

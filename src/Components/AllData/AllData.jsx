@@ -1,21 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import SingleData from '../SingleData/SingleData';
-
+import Loading from '../Loading/Loading';
 const AllData = () => {
     const data = useLoaderData();
-    console.log(data)
+    
+    const [Data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [showAll,setShowAll] = useState(false)
+    const sliceData = showAll ? data : data.slice(0,6);
+    useEffect(() => {
+        fetch('data.json')
+            .then((res) => res.json())
+            .then((result) => {
+                setData(result);
+                setLoading(false);
+            });
+    }, []);
+
     return (
         <div>
             <div className='mx-auto container mb-10'>
-            <h2 className='text-center text-4xl'>Our Best Lawer</h2>
-            <p className='text-center'>Advocate Ishaque Ali is a highly experienced corporate lawyer with 20+ years of success, offering expert legal solutions with integrity, professionalism, and a proven track record in complex business cases.</p>
+                <h2 className='text-center text-4xl'>Our Best Lawyer</h2>
+                <p className='text-center'>
+                    Advocate Ishaque Ali is a highly experienced corporate lawyer with 20+ years of success, offering expert legal solutions with integrity, professionalism, and a proven track record in complex business cases.
+                </p>
+
+                {/* 🔄 Show loader if navigating (e.g., data is loading) */}
+                {loading && (
+                    <div className='text-center my-6'>
+                        <Loading />
+                    </div>
+                )}
             </div>
-            <div className='grid grid-cols-1 mb-8 md:grid-cols-3 gap-8'>
+            
+
+            <div className='grid grid-cols-1 mb-8 md:grid-cols-3 gap-8 mx-auto container'>
                 {
-                    data.map(info => <SingleData info={info}></SingleData>)
+                    sliceData.map(info => <SingleData key={info.id} info={info} />)
                 }
             </div>
+
+           <div className='text-center p-4'>
+           <button
+            onClick={() => setShowAll(!showAll)}
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-center p-4"
+          >
+           {showAll?`Show Less Lawyer` : `Show All lawyer`}
+          </button>
+           </div>
+           <div className='text-center mb-6 mt-6'>
+            <h2 className='text-3xl mt-6 mb-6'>We Provide Best Law Services</h2>
+            <p>Our platform connects you with verified, experienced Lawyers across various specialities — all at your convenience. </p>
+           </div>
+
         </div>
     );
 };

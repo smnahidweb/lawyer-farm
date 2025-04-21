@@ -10,7 +10,8 @@ import MyBooking from './MyBooking/MyBooking';
 import Blogs from './Blogs/Blogs';
 import Contact from './Contact/Contact';
 
-
+import Loading from './Loading/Loading';
+import Details from './Details/Details';
 
 export const router = createBrowserRouter([
     {
@@ -20,8 +21,9 @@ export const router = createBrowserRouter([
      children:[
      {
       path: "/",
-      loader: ()=> fetch('data.json'),
-      Component: Home
+      loader: ()=> fetch('../data.json'),
+      Component: Home,
+    
     
      },
      {
@@ -35,6 +37,11 @@ export const router = createBrowserRouter([
      {
         path:'contact',
         Component: Contact
+     },
+     {
+      path:'/detail/:id',
+      loader: ()=> fetch('../data.json'),
+      Component:Details
      }
 
      
