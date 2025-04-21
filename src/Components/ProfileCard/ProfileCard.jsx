@@ -58,7 +58,7 @@ const ProfileCard = ({ profile, id }) => {
             <div className="text-sm text-gray-500 mt-1">
               <span className="inline-block mr-1">🔖</span> License No: {licenseNo}
             </div>
-            <p className='text-green-400 ml-1'>Consultation Fee: {fee}</p>
+            <p className='text-green-400 ml-1'>Consultation Fee: {fee} Taka</p>
           </div>
         </div>
       </div>
