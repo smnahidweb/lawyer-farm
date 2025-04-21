@@ -21,7 +21,7 @@ const OverView = () => {
         >
           <div className="text-4xl mb-3"><img src={item.icon} alt="" /></div>
           <div className="text-3xl font-bold text-gray-800">
-          {<CountUp  end={item.number} duration={2.75}  />  }+
+          {<CountUp  end={item.number} duration={3}  />  }+
              </div>
           <div className="text-gray-500">{item.label}</div>
         </div>
