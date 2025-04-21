@@ -10,6 +10,7 @@ const ProfileCard = ({profile,id}) => {
     } = SingleProfile || {}
     console.log(LawyerImage)
     return (
+        <div>
         <div className='mx-auto container  flex items-center justify-center mb-10  '>
             <div className="   border rounded-xl p-4 shadow-md bg-white w-full max-w-xl flex items-center gap-4">
   {/* Image on the Left */}
@@ -48,15 +49,46 @@ const ProfileCard = ({profile,id}) => {
     <p className='text-green-400 ml-1'> Consultation Fee: {fee}</p>
 
     {/* View Details Button */}
-    <Link to={``}>
-  <button className="mt-3 text-blue-600 border border-blue-600 hover:bg-blue-50 py-1 px-4 rounded-full text-sm">
-    View Details
-  </button>
-</Link>
+    
 
   </div>
 </div>
+
+</div>
+
+     <div className=" mx-auto container bg-gray-50 mb-10">
+      <h2 className="text-lg font-semibold text-center border-b pb-2">Book an Appointment</h2>
+
+      <div className="mt-4">
+        <h3 className="font-medium mb-2">Availability</h3>
+
+        <div className="flex justify-end mb-3">
+          <span className="bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full">
+            Lawyer Available Today
+          </span>
         </div>
+
+        <div className="bg-orange-100 text-orange-700 text-sm p-3 rounded-md mb-4 flex items-start gap-2 text-center">
+          <svg className="w-5 h-5 mt-1 text-orange-500" fill="currentColor" viewBox="0 0 20 20 text-center">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm-.75-4.75h1.5v1.5h-1.5v-1.5zm0-6h1.5v4.5h-1.5v-4.5z" />
+          </svg>
+          <span className='text-center'>
+            Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
+          </span>
+        </div>
+
+        <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-full transition duration-200">
+          Book Appointment Now
+        </button>
+      </div>
+    </div>
+
+        </div>
+        
+
+
+//  Booking section 
+
     );
 };
 
