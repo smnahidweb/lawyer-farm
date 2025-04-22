@@ -2,7 +2,7 @@
     {
       "id": 1,
       "LawyerImage": "https://i.ibb.co.com/W4wtgYCr/lawer1.jpg",
-      "name": "Barrister Anisur Rahman",
+      "name": "Barrister Esha Rahman",
       "experience": "12 years",
       "speciality": "Criminal Law",
       "fee": 2400,
@@ -42,7 +42,7 @@
     {
       "id": 5,
       "LawyerImage": "https://i.ibb.co.com/SXbfNJV5/lawer5.webp",
-      "name": "Advocate Meherin Akhter",
+      "name": "Advocate Nasir Mojumdar",
       "experience": "6 years",
       "speciality": "Cyber & ICT Law",
       "fee": 2900,
@@ -62,7 +62,7 @@
     {
       "id": 7,
       "LawyerImage": "https://i.ibb.co.com/d4gcdXBx/lawer7.jpg",
-      "name": "Advocate Tamanna Nasrin",
+      "name": "Advocate Rashed Rahman",
       "experience": "5 years",
       "speciality": "Women & Child Rights",
       "fee": 2100,
@@ -88,6 +88,37 @@
       "fee": 2400,
       "availability": ["Monday", "Wednesday", "Friday"],
       "licenseNo": "BD-LAW-10932"
+    },
+    {
+      "id": 10,
+      "LawyerImage": "https://i.ibb.co.com/bj4tjDgv/lawer10.jpg",
+      "name": "Advocate Farzana Haque",
+      "experience": "9 years",
+      "speciality": "Immigration Law",
+      "fee": 2650,
+      "availability": ["Sunday", "Tuesday", "Thursday"],
+      "licenseNo": "BD-LAW-14235"
+    },
+    {
+      "id": 11,
+      "LawyerImage": "https://i.ibb.co.com/FqqCCgGN/lawer11.jpg",
+      "name": "Barrister Tanim Rahman",
+      "experience": "13 years",
+      "speciality": "International Law",
+      "fee": 3100,
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "licenseNo": "BD-LAW-13864"
+    },
+    {
+      "id": 12,
+      "LawyerImage": "https://i.ibb.co.com/1J035CLL/lawer12.jpg",
+      "name": "Senior Advocate Lutfur Nahar",
+      "experience": "18 years",
+      "speciality": "Environmental Law",
+      "fee": 2950,
+      "availability": ["Saturday", "Tuesday", "Thursday"],
+      "licenseNo": "BD-LAW-10018"
     }
+    
   ]
   
