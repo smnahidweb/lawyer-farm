@@ -5,6 +5,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  LabelList,
   ResponsiveContainer
 } from "recharts";
 
@@ -50,6 +51,7 @@ const Rechart = ({ bookings }) => {
                 <TriangleBar key={index} fill={entry.fill} {...entry} />
               ))
             }
+              <LabelList dataKey="fee" position="top" fill="#333" fontSize={14} />
           </Bar>
         </BarChart>
       </ResponsiveContainer>

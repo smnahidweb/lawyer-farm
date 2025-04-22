@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
-
+import { Link } from 'react-router-dom';
 const ProfileCard = ({ profile, id }) => {
   const navigate = useNavigate();
   const [showLoader, setShowLoader] = useState(true);
@@ -19,9 +19,20 @@ const ProfileCard = ({ profile, id }) => {
 
   if (!SingleProfile) {
     return (
-      <div className="text-center mt-10 text-red-500 font-semibold">
-        Profile not found.
-      </div>
+      <div className="text-center mt-10 font-semibold bg-red-50 rounded-2xl mx-auto container mb-10">
+       <h2 className='text-red-500 text-2xl text-center mb-4 pt-8'>No Lawyer Found</h2>
+       <p className='text-center text-gray-400 '>No Lawyer found with this</p>
+       <p className='text-center text-xl text-gray-400 mb-10'> ID: {id}</p>
+       <Link to="/">
+        
+        <div className='mx-auto container flex justify-center items-center mt-4'>
+        <button class="btn btn-primary mx-auto text-center mb-6 ">View All Lawyer</button>
+        </div>
+          
+          </Link>
+           </div>
+
+         
     );
   }
 
@@ -40,11 +51,11 @@ const ProfileCard = ({ profile, id }) => {
     const isDuplicate = existing.some(item => String(item.id) === String(id));
 
     if (isDuplicate) {
-      toast.warn('This appointment is already added!');
+      toast.warn(` Appointment is already added for ${name}! `);
     } else {
       const updatedBookings = [...existing, SingleProfile];
       localStorage.setItem('bookings', JSON.stringify(updatedBookings));
-      toast.success('Appointment booked successfully!');
+      toast.success(`Appointment booked successfully for ${name}!`);
       setTimeout(() => {
         navigate('/mybooking');
       }, 1500);

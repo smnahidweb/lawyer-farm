@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Rechart from '../Rechart/Rechart';
-
+import { Link } from 'react-router';
 const MyBooking = () => {
   const [bookings, setBookings] = useState([]);
 
@@ -20,9 +20,19 @@ const MyBooking = () => {
 
   if (bookings.length === 0) {
     return (
-      <div className="text-center mt-20">
-        <h2 className="text-xl font-semibold text-gray-600">No appointments booked yet.</h2>
+      
+      <div className="text-center  bg-gray-300 p-8 mx-auto container rounded-4xl mt-10 mb-10">
+        <h2 className="text-2xl font-semibold text-gray-600 mb-4  ">You have no appointments booked yet.</h2>
+        <p className='text-gray-500'>Our platform connect you with verified experienced lawyer across various specialist....</p>
         <ToastContainer position="top-center" autoClose={2000} />
+
+        <div className='mx-auto container flex justify-center items-center mt-4'>
+          <Link to="/">
+          
+          <button class="btn btn-primary mx-auto text-center ">Book an Appointment</button>
+          
+          </Link>
+        </div>
       </div>
     );
   }

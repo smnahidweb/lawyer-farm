@@ -12,6 +12,7 @@ import Contact from './Contact/Contact';
 
 import Loading from './Loading/Loading';
 import Details from './Details/Details';
+import Error from './Error/Error';
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       path:'/detail/:id',
       loader: ()=> fetch('../data.json'),
       Component:Details
+     },
+     {
+      path:"*",
+      Component: Error
      }
 
      

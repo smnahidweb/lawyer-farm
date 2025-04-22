@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Contact = () => {
+const Error = () => {
     return (
-        <div>
-           return (
         <div>
          <div className='mx-auto container mb-56 mt-4 '>
          <img className='mx-auto container w-xl' src="error.jpg" alt="" />
@@ -20,8 +18,6 @@ const Contact = () => {
          </div>
         </div>
     );
-        </div>
-    );
 };
 
-export default Contact;
+export default Error;
