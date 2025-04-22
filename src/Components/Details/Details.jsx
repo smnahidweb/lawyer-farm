@@ -23,10 +23,6 @@ const Details = () => {
 
   return (
     <div>
-      <div className='bg-gray-300 p-8 mx-auto container rounded-4xl mt-10 mb-10'>
-        <h2 className='text-3xl text-center py-4'>Lawyers Profile Details</h2>
-        <p className='text-center'>Please see the details about your selected lawyer. Here gives the overall details</p>
-      </div>
       
       {
       data.length > 0 && (

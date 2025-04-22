@@ -8,7 +8,6 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-// Triangle shape function
 const getPath = (x, y, width, height) => (
   `M${x},${y + height}
    C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2},${y}
@@ -16,23 +15,22 @@ const getPath = (x, y, width, height) => (
    Z`
 );
 
-// Custom shape component
+
 const TriangleBar = (props) => {
   const { fill, x, y, width, height } = props;
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-// Chart component
+
 const Rechart = ({ bookings }) => {
-  // Group fee by doctor
-  const doctorFees = bookings.reduce((acc, curr) => {
+
+  const lawyerFees = bookings.reduce((acc, curr) => {
     acc[curr.name] = (acc[curr.name] || 0) + curr.fee;
     return acc;
   }, {});
 
-  // Convert to chart data format
   const colors = ['#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#f97316'];
-  const chartData = Object.entries(doctorFees).map(([name, fee], index) => ({
+  const chartData = Object.entries(lawyerFees).map(([name, fee], index) => ({
     name,
     fee,
     fill: colors[index % colors.length]
@@ -40,7 +38,7 @@ const Rechart = ({ bookings }) => {
 
   return (
     <div className="mb-10">
-      <h2 className="text-xl font-bold mb-4 text-center">Appointment Fees Chart</h2>
+   
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={chartData} margin={{ top: 10, right: 30, left: 30, bottom: 0 }}>
           <XAxis dataKey="name" />
@@ -55,6 +53,10 @@ const Rechart = ({ bookings }) => {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+     <div>
+     <h2 className="text-2xl font-bold mb-6 text-center  mt-5">My Today Appointments</h2>
+     <p className="text-gray-600 text-center">Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+     </div>
     </div>
   );
 };
