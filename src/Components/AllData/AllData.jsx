@@ -21,9 +21,9 @@ const AllData = () => {
     return (
         <div>
             <div className='mx-auto container mb-10'>
-                <h2 className='text-center text-4xl'>Our Best Lawyer</h2>
-                <p className='text-center'>
-                    Advocate Ishaque Ali is a highly experienced corporate lawyer with 20+ years of success, offering expert legal solutions with integrity, professionalism, and a proven track record in complex business cases.
+                <h2 className='text-center text-4xl font-bold mb-4'>Our Best Lawyer</h2>
+                <p className='text-center text-gray-600'>
+                    Our Platform highly experienced corporate lawyer with 20+ years of success, offering expert legal solutions with integrity, professionalism, and a proven track record in complex business cases.
                 </p>
 
                 {/* 🔄 Show loader if navigating (e.g., data is loading) */}
@@ -35,7 +35,7 @@ const AllData = () => {
             </div>
             
 
-            <div className='grid grid-cols-1 mb-8 md:grid-cols-3 gap-8 mx-auto container'>
+            <div className='grid grid-cols-1 mb-8 md:grid-cols-2 gap-8 mx-auto container'>
                 {
                     sliceData.map(info => <SingleData key={info.id} info={info} />)
                 }

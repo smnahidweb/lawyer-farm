@@ -25,7 +25,7 @@ const Footer = () => {
   </div>
   <nav>
     <div className="grid grid-flow-col gap-4">
-   <Link to="https://web.facebook.com/avro-ahmed-nil/"> <FaFacebook size={30} /></Link>
+   <Link to="https://web.facebook.com/programming-hero/"> <FaFacebook size={30} /></Link>
     <Link to="https://github.com/smnahidweb/"> <FaGithub size={30} /></Link>
     <Link to="https://www.youtube.com/@BinaryWaveAcademy"><FaYoutube  size={30} /></Link>
 

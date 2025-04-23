@@ -2,27 +2,33 @@ import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Rechart from '../Rechart/Rechart';
-import { Link, Outlet, useNavigation } from 'react-router';
+import { Link, Outlet } from 'react-router';
 import Loading from '../Loading/Loading';
 const MyBooking = () => {
   const [bookings, setBookings] = useState([]);
-  const navigation = useNavigation();
-      const isLoading = navigation.state === 'loading';
-      <div className='text-center'>
-      {isLoading && <Loading />}
-      <Outlet></Outlet>
-      </div>
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('bookings')) || [];
     setBookings(stored);
   }, []);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000); 
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   const handleCancel = (id) => {
     const updated = bookings.filter(item => item.id !== id);
     localStorage.setItem('bookings', JSON.stringify(updated));
     setBookings(updated);
-    toast.error('❌ Appointment cancelled!');
+    toast.error(' Appointment cancelled!');
   };
 
   if (bookings.length === 0) {
@@ -50,7 +56,7 @@ const MyBooking = () => {
       
      
       <div className="container mx-auto p-4">
-      {/* ✅ Chart Above Cards */}
+    
       <Rechart bookings={bookings} />
 
       </div>
@@ -65,7 +71,7 @@ const MyBooking = () => {
            <div className='flex justify-between'>
            <div>
            <h3 className="text-lg font-semibold">{item.name}</h3>
-           <p className="text-gray-600 text-sm">{item.speciality}</p>
+           <p className="text-gray-600 text-sm text-left">{item.speciality}</p>
            </div>
             
            <div>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link,NavLink } from 'react-router';
+
+
+
 const Navbar = () => {
     const links = <>
     
@@ -24,7 +27,7 @@ const Navbar = () => {
       </ul>
     </div>
    <div className='flex items-center'>
-    <img src="logo.png" alt="" />
+    <img src='logo.png' alt="" />
     <h2>Law.BD</h2>
    </div>
   </div>

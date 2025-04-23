@@ -46,13 +46,21 @@ export const router = createBrowserRouter([
       loader: ()=> fetch('../data.json'),
       Component:Details
      },
-     {
-      path:"*",
-      Component: Error
-     }
+     
 
      
      
   ]
     },
+    {
+      path: "*",
+      Component: Error, // ✅ Only Navbar, no Footer
+      children: [
+        {
+         //  path: "*",
+         //  Component: Error,
+        },
+      ],
+    },
   ]);
+ 

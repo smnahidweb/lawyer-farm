@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className='mt-10 mb-10'>   
+        <div className='mt-10 mb-30'>   
               <span className="loading loading-bars loading-xs"></span>
 <span className="loading loading-bars loading-sm"></span>
 <span className="loading loading-bars loading-md"></span>
