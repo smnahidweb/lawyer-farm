@@ -29,10 +29,12 @@ export const router = createBrowserRouter([
      },
      {
         path:'/mybooking',
+        hydrateFallbackElement: <Loading/>,
         Component:MyBooking
      },
      {
         path:'/blogs',
+        loader: ()=> fetch('../Blogsdata.json'),
         Component: Blogs
      },
      {

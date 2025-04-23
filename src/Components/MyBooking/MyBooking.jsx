@@ -2,9 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Rechart from '../Rechart/Rechart';
-import { Link } from 'react-router';
+import { Link, Outlet, useNavigation } from 'react-router';
+import Loading from '../Loading/Loading';
 const MyBooking = () => {
   const [bookings, setBookings] = useState([]);
+  const navigation = useNavigation();
+      const isLoading = navigation.state === 'loading';
+      <div className='text-center'>
+      {isLoading && <Loading />}
+      <Outlet></Outlet>
+      </div>
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('bookings')) || [];

@@ -2,12 +2,17 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div>   
-             <span class="loading loading-dots loading-xs"></span>
-<span class="loading loading-dots loading-sm"></span>
-<span class="loading loading-dots loading-md"></span>
-<span class="loading loading-dots loading-lg"></span>
-<span class="loading loading-dots loading-xl"></span>
+        <div className='mt-10 mb-10'>   
+              <span className="loading loading-bars loading-xs"></span>
+<span className="loading loading-bars loading-sm"></span>
+<span className="loading loading-bars loading-md"></span>
+<span className="loading loading-bars loading-lg"></span>
+<span className="loading loading-bars loading-xl"></span>
+<span className="loading loading-bars loading-xs"></span>
+<span className="loading loading-bars loading-sm"></span>
+<span className="loading loading-bars loading-md"></span>
+<span className="loading loading-bars loading-lg"></span>
+<span className="loading loading-bars loading-xl"></span>
         </div>
     );
 };
