@@ -10,13 +10,27 @@ const AllData = () => {
     const [showAll,setShowAll] = useState(false)
     const sliceData = showAll ? data : data.slice(0,6);
     useEffect(() => {
+
+
+        const timeout = setTimeout(() => {
+            setLoading(false);
+          }, 1000); 
+        
+
+
+  
         fetch('data.json')
             .then((res) => res.json())
             .then((result) => {
                 setData(result);
                 setLoading(false);
-            });
+            },);
+            return () => clearTimeout(timeout);
     }, []);
+
+    if(!data){
+        return <Loading/>
+        }
 
     return (
         <div>

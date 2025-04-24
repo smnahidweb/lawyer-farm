@@ -11,7 +11,7 @@ const Blogs = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Simulate 1 second loading
+    }, 1000); 
 
     return () => clearTimeout(timeout);
   }, []);

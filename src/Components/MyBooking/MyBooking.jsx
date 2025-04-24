@@ -15,7 +15,7 @@ const MyBooking = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    },); 
 
     return () => clearTimeout(timeout);
   }, []);

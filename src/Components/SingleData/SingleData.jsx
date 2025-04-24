@@ -29,7 +29,7 @@ const SingleData = ({info}) => {
     </div>
 
     
-    <Link to={`/detail/${info.id}`}>
+    <Link to={`/detail/${info.licenseNo}`}>
   <button className="mt-3 text-blue-600 border border-blue-600 hover:bg-blue-50 py-1 px-4 rounded-full text-sm w-full">
     View Details
   </button>

@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
 import { Link } from 'react-router-dom';
-const ProfileCard = ({ profile, id }) => {
+const ProfileCard = ({ profile, licenseNo }) => {
   const navigate = useNavigate();
   const [showLoader, setShowLoader] = useState(true);
 
@@ -15,14 +15,14 @@ const ProfileCard = ({ profile, id }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const SingleProfile = profile.find(p => String(p.id) === String(id));
+  const SingleProfile = profile.find(p => String(p.licenseNo) === String(licenseNo));
 
   if (!SingleProfile) {
     return (
       <div className="text-center mt-10 font-semibold bg-red-50 rounded-2xl mx-auto container mb-10">
        <h2 className='text-red-500 text-2xl text-center mb-4 pt-8'>No Lawyer Found</h2>
        <p className='text-center text-gray-400 '>No Lawyer found with this</p>
-       <p className='text-center text-xl text-gray-400 mb-10'> ID: {id}</p>
+       <p className='text-center text-xl text-gray-400 mb-10'> LicenseNo : {licenseNo}</p>
        <Link to="/">
         
         <div className='mx-auto container flex justify-center items-center mt-4'>
@@ -39,7 +39,7 @@ const ProfileCard = ({ profile, id }) => {
   const {
     LawyerImage,
     name,
-    licenseNo,
+    // licenseNo,
     experience,
     availability,
     fee,
@@ -48,7 +48,7 @@ const ProfileCard = ({ profile, id }) => {
 
   const handleBookAppointment = () => {
     const existing = JSON.parse(localStorage.getItem('bookings')) || [];
-    const isDuplicate = existing.some(item => String(item.id) === String(id));
+    const isDuplicate = existing.some(item => String(item.licenseNo) === String(licenseNo));
 
     if (isDuplicate) {
       toast.warn(` Appointment is already added for ${name}! `);
@@ -58,7 +58,7 @@ const ProfileCard = ({ profile, id }) => {
       toast.success(`Appointment booked successfully for ${name}!`);
       setTimeout(() => {
         navigate('/mybooking');
-      }, 1500);
+      }, );
     }
   };
 

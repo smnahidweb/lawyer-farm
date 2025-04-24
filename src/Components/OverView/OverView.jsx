@@ -9,31 +9,29 @@ const OverView = () => {
     { icon: 'https://i.ibb.co.com/997cyKSn/success-staffs.png', number: 300, label: 'Total Staffs' }
   ];
 
-  const [isInView, setIsInView] = useState(false);
+  const [trigger, setTrigger] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-      
         if (entries[0].isIntersecting) {
-          setIsInView(true);
+          
+          setTrigger(true);
+
+          setTimeout(() => setTrigger(false), 1000);
         }
       },
       {
-        threshold: 0.1, 
+        threshold: 0.4, 
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const currentRef = sectionRef.current;
+    if (currentRef) observer.observe(currentRef);
 
-   
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -45,9 +43,12 @@ const OverView = () => {
             key={idx}
             className="flex flex-col items-center justify-center bg-white shadow-md p-6 rounded-lg text-center"
           >
-            <div className="text-4xl mb-3"><img src={item.icon} alt="" /></div>
+            <div className="text-4xl mb-3">
+              <img src={item.icon} alt="" />
+            </div>
             <div className="text-3xl font-bold text-gray-800">
-              {isInView && <CountUp end={item.number} duration={3} />}+
+              {trigger && <CountUp end={item.number} duration={2.5} />}
+              {!trigger && `${item.number}+`}
             </div>
             <div className="text-gray-500">{item.label}</div>
           </div>

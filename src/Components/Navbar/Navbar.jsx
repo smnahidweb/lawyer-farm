@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link,NavLink } from 'react-router';
-
+import logo from '../../assets/logo.png'
 
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
       </ul>
     </div>
    <div className='flex items-center'>
-    <img src='logo.png' alt="" />
+    <img className='w-[40px]' src={logo} alt="" />
     <h2>Law.BD</h2>
    </div>
   </div>

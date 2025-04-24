@@ -17,11 +17,13 @@ import Error from './Error/Error';
 export const router = createBrowserRouter([
     {
       path: "/",
+      // hydrateFallbackElement: Loading,
      Component:MainLayOut, 
      errorElement:Error,
      children:[
      {
       path: "/",
+      // hydrateFallbackElement: Loading,
       loader: ()=> fetch('../data.json'),
       Component: Home,
     
@@ -29,11 +31,13 @@ export const router = createBrowserRouter([
      },
      {
         path:'/mybooking',
+       
         hydrateFallbackElement: <Loading/>,
         Component:MyBooking
      },
      {
         path:'/blogs',
+        // hydrateFallbackElement: Loading,
         loader: ()=> fetch('../Blogsdata.json'),
         Component: Blogs
      },
@@ -42,7 +46,7 @@ export const router = createBrowserRouter([
         Component: Contact
      },
      {
-      path:'/detail/:id',
+      path:'/detail/:licenseNo',
       loader: ()=> fetch('../data.json'),
       Component:Details
      },
