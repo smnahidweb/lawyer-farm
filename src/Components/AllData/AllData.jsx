@@ -40,7 +40,7 @@ const AllData = () => {
                     Our Platform highly experienced corporate lawyer with 20+ years of success, offering expert legal solutions with integrity, professionalism, and a proven track record in complex business cases.
                 </p>
 
-                {/* 🔄 Show loader if navigating (e.g., data is loading) */}
+             
                 {loading && (
                     <div className='text-center my-6'>
                         <Loading />
