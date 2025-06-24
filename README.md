@@ -27,7 +27,7 @@ Live Website: [https://curious-torrone-3e4c10.netlify.app/]
 - 📅 Book appointments with lawyers  
 - 🗂 Prevent duplicate booking (Toastify alerts)  
 - 📦 Bookings saved in localStorage  
-- 🌙 Light/Dark mode toggle using Context  
+
 - 🚦 Conditional rendering based on booking data
 
 ---
