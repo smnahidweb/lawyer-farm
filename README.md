@@ -1,6 +1,6 @@
 # 👨‍⚖️ Lawyer Farm
 
-<img src="https://ibb.co/gbYyhPLs" width="100%" alt="Lawyer Farm Screenshot"/>
+<img src="https://i.ibb.co/Y4g2wyFv/lawer2.png" width="100%" alt="Lawyer Farm Screenshot"/>
 
 
 A professional lawyer booking platform where users can browse lawyer profiles, book appointments, and manage their bookings efficiently.
