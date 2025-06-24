@@ -1,12 +1,49 @@
-# React + Vite
+# 👨‍⚖️ Lawyer Farm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional lawyer booking platform where users can browse lawyer profiles, book appointments, and manage their bookings efficiently.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+Live Website: [https://curious-torrone-3e4c10.netlify.app/]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Technologies Used
+
+- **Frontend:** React.js, React Router DOM, Tailwind CSS, DaisyUI
+- **Backend:** Not used (Client-side only)
+- **Authentication:** Firebase Authentication
+- **State Management:** useState, useEffect, Context API
+- **Notifications:** React Toastify
+
+---
+
+## 🔑 Main Features
+
+- 🔍 Browse lawyer profiles with detailed information  
+- 📅 Book appointments with lawyers  
+- 🗂 Prevent duplicate booking (Toastify alerts)  
+- 📦 Bookings saved in localStorage  
+- 🌙 Light/Dark mode toggle using Context  
+- 🚦 Conditional rendering based on booking data
+
+---
+
+## 🧩 Dependencies
+
+| Package              | Purpose                            |
+|----------------------|------------------------------------|
+| `react-router-dom`   | Routing and navigation             |
+| `firebase`           | Authentication                     |
+| `react-toastify`     | Toast messages                     |
+| `daisyui`            | UI components over Tailwind        |
+| `tailwindcss`        | Styling framework                  |
+| `classnames`         | Conditional class handling         |
+
+---
+
+## 🛠️ How to Run Locally
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/smnahidweb/lawyer-farm.git
+   cd lawyer-farm
